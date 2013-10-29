@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RemoteService</string>
+    <string name="start_service">Start RemoteService</string>
+    <string name="stop_service">Stop RemoteService</string>
+    
+</resources>
