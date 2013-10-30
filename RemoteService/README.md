@@ -1,5 +1,5 @@
-RemoteServiceBI
-===============
+RemoteService
+=============
 
 Android Application with a Service running in another process.
 
