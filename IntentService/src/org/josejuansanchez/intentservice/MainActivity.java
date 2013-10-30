@@ -41,11 +41,11 @@ public class MainActivity extends Activity {
 	
     public void startService(View view) {
     	Log.d(getClass().getSimpleName(), "startService");
-    	startService(new Intent(getBaseContext(), MyIntentService.class));    	
+    	startService(new Intent(this, MyIntentService.class));    	
     }
     
     public void stopService(View view) {
-    	stopService(new Intent(getBaseContext(), MyIntentService.class));
+    	stopService(new Intent(this, MyIntentService.class));
     }
     
     private BroadcastReceiver intentReceiver = new BroadcastReceiver() { 

@@ -14,10 +14,10 @@ public class MainActivity extends Activity {
     }
 
     public void startService(View view) {
-    	startService(new Intent(getBaseContext(), LocalService.class));
+    	startService(new Intent(this, LocalService.class));
     }
     
     public void stopService(View view) {
-    	stopService(new Intent(getBaseContext(), LocalService.class));
+    	stopService(new Intent(this, LocalService.class));
     }    
 }

@@ -41,11 +41,11 @@ public class MainActivity extends Activity {
 	}		
 	
     public void startService(View view) {
-    	startService(new Intent(getBaseContext(), RemoteService.class));
+    	startService(new Intent(this, RemoteService.class));
     }
     
     public void stopService(View view) {
-    	stopService(new Intent(getBaseContext(), RemoteService.class));
+    	stopService(new Intent(this, RemoteService.class));
     }
     
     private BroadcastReceiver intentReceiver = new BroadcastReceiver() { 

@@ -37,7 +37,7 @@ public class RemoteService extends Service {
 	private void SimulateALongOperation() {
 		// Simulate taking some time to perform a task
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
