@@ -1,4 +1,4 @@
-GDG-DevFestSur-2013
+GDG DevFestSur 2013
 ===================
 
-Sample codes
+Sample codes in the talk "Android Services" in GDG DevFestSur 2013.
