@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;LocalService_HandlerThread&apos; to &apos;LocalServiceHandlerThread&apos;&#x0A;- Original element: &apos;LocalService_HandlerThread&apos;&#x0A;- Renamed element: &apos;LocalService_HandlerThread&apos;&#x0A;- Update references to refactored element" description="Rename Java project &apos;LocalService_HandlerThread&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=LocalService_HandlerThread" name="LocalServiceHandlerThread" references="true" stamp="1383097564054" version="1.0"/>
+</session>
