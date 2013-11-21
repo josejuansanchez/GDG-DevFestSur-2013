@@ -7,6 +7,8 @@ Android Application using an IntentService running in the same process as the re
 
 ## AndroidManifest.xml
 
+We have set the `android:process` attribute to specify a process in which the IntentService should run.
+
 	<?xml version="1.0" encoding="utf-8"?>
 	<manifest ...
     	<uses-sdk ...
