@@ -11,8 +11,26 @@ import android.content.Intent;
 import android.content.IntentFilter;
 
 public class MainActivity extends Activity {
-	IntentFilter intentFilter;
+	IntentFilter mIntentFilter;
 
+    private BroadcastReceiver mIntentReceiver = new BroadcastReceiver() { 
+    	@Override
+    	public void onReceive(Context context, Intent intent) { 
+    		
+    		switch(intent.getIntExtra(Constants.STATUS, Constants.STATE_LONG_OPERATION_STARTED)) {
+    		case Constants.STATE_LONG_OPERATION_STARTED:
+        		Toast.makeText(getBaseContext(), "The long operation has started", Toast.LENGTH_LONG).show();
+        		Log.d(getClass().getSimpleName(), "The long operation has started");
+    			break;
+    		
+    		case Constants.STATE_LONG_OPERATION_COMPLETED:
+        		Toast.makeText(getBaseContext(), "The long operation has finished", Toast.LENGTH_LONG).show();
+        		Log.d(getClass().getSimpleName(), "The long operation has finished");        		
+    			break;
+    		}    		
+    	}
+    };	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -24,11 +42,11 @@ public class MainActivity extends Activity {
 		super.onResume();
 		
 		// Intent to filter
-		intentFilter = new IntentFilter(); 
-		intentFilter.addAction("LONG_OPERATION_ACTION");
+		mIntentFilter = new IntentFilter(); 
+		mIntentFilter.addAction(Constants.LONG_OPERATION_ACTION);
 		
 		// Register the receiver
-		registerReceiver(intentReceiver, intentFilter);		
+		registerReceiver(mIntentReceiver, mIntentFilter);		
 	}
 	
 	@Override
@@ -36,7 +54,7 @@ public class MainActivity extends Activity {
 		super.onPause();
 		
 		// Unregister the receiver
-		unregisterReceiver(intentReceiver);		
+		unregisterReceiver(mIntentReceiver);		
 	}	
 	
     public void startService(View view) {
@@ -46,12 +64,5 @@ public class MainActivity extends Activity {
     
     public void stopService(View view) {
     	stopService(new Intent(this, MyIntentService.class));
-    }
-    
-    private BroadcastReceiver intentReceiver = new BroadcastReceiver() { 
-    	@Override
-    	public void onReceive(Context context, Intent intent) { 
-    		Toast.makeText(getBaseContext(), "The long operation has finished", Toast.LENGTH_LONG).show();
-    	}
-    };
+    }   
 }
