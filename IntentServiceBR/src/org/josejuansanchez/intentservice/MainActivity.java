@@ -19,12 +19,12 @@ public class MainActivity extends Activity {
     		
     		switch(intent.getIntExtra(Constants.STATUS, Constants.STATE_LONG_OPERATION_STARTED)) {
     		case Constants.STATE_LONG_OPERATION_STARTED:
-        		Toast.makeText(getBaseContext(), "The long operation has started", Toast.LENGTH_LONG).show();
+        		Toast.makeText(context, "The long operation has started", Toast.LENGTH_LONG).show();
         		Log.d(getClass().getSimpleName(), "The long operation has started");
     			break;
     		
     		case Constants.STATE_LONG_OPERATION_COMPLETED:
-        		Toast.makeText(getBaseContext(), "The long operation has finished", Toast.LENGTH_LONG).show();
+        		Toast.makeText(context, "The long operation has finished", Toast.LENGTH_LONG).show();
         		Log.d(getClass().getSimpleName(), "The long operation has finished");        		
     			break;
     		}    		
