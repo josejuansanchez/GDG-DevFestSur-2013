@@ -5,7 +5,7 @@ Android Application using an IntentService running in a remote process.
 
 "Remote" in this example means that the IntentService is hosted in another process, but there is only one application.
 
-![IntentService](http://josejuansanchez.org/blogimages/android_intentservice.png)
+![IntentService](http://josejuansanchez.org/blogimages/android_intentservice_remote.png)
 
 ## AndroidManifest.xml
 
